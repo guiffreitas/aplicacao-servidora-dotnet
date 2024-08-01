@@ -2,14 +2,8 @@
 
 namespace aplicacao_servidora_dotnet.Security
 {
-    public class RolePolicyRequirement : IAuthorizationRequirement
+    public class RoleRequirement : IAuthorizationRequirement
     {
-        public string[]? Roles { get; set; }
-
-        public RolePolicyRequirement(string? roles) 
-        {
-            Roles = roles?.Split(",");
-        }
-
+        public readonly string[] Roles = ["api_access"];
     }
 }

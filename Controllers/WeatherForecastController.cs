@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace aplicacao_servidora_dotnet.Controllers
 {
     [ApiController]
-    [Authorize("ConsumidorValido")]
+    [Authorize(Roles = "admin_access")]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
