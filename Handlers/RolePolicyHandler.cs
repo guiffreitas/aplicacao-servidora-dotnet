@@ -4,9 +4,9 @@ using System.Security.Claims;
 
 namespace aplicacao_servidora_dotnet.Handlers
 {
-    public class RolePolicyHandler : AuthorizationHandler<RolePolicyRequirement>
+    public class RoleAuthorizationHandler : AuthorizationHandler<RoleRequirement>
     {
-        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, RolePolicyRequirement requirement)
+        protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, RoleRequirement requirement)
         {
             var roleClaim = context?.User.FindFirst(claim => claim.Type == ClaimTypes.Role);
 
