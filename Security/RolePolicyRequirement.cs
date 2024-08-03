@@ -4,6 +4,6 @@ namespace aplicacao_servidora_dotnet.Security
 {
     public class RoleRequirement : IAuthorizationRequirement
     {
-        public readonly string[] Roles = ["api_access"];
+        public readonly string[] Roles = ["api_access", "admin_access"];
     }
 }
